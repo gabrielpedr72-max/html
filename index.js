@@ -1,6 +1,6 @@
 var lista = [];
 var produto = "";
-
-do {
-
-} while (produto.toUpperCase() == 'Sair')
+while (true) {
+    if(produto == 'sair')
+        break; // comnando para encerramento do loop
+}
