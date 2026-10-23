@@ -2,7 +2,7 @@ var lista = [];
 var produto = "";
 
 while (true) {
-    produto = prompt("Informe um produto (ou 'sair' para encerrar):");
+    produto = prompt("Informe um produto ou 'sair' para encerrar):");
 
     if (produto === null || produto.toUpperCase() === "SAIR") {
         break;
@@ -32,8 +32,9 @@ if (lista.length === 0) {
 }
 
 // Calcula e mostra a média
-alert(calcularMedia(10, 7));
 
-function calcularMedia(primeiroValor, segundoValor) {
-    return (primeiroValor + segundoValor) / 2;
-}
+// alert(calcularMedia(10, 7)); // tornei um comentário para adicionar posteriormente
+
+// function calcularMedia(primeiroValor, segundoValor) {
+//     return (primeiroValor + segundoValor) / 2;
+// }
