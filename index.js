@@ -7,5 +7,9 @@ while (true) {
 
 
 do {
-
-} while (produto.toUpperCase() == 'Sair')
+    produto - prompt('Informe o produto: ');
+    
+    if (produto.toUpperCase() != 'SAIR')
+        lista.push()
+    } 
+while (produto.toUpperCase() == 'SAIR')
