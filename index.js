@@ -10,6 +10,6 @@ do {
     produto - prompt('Informe o produto: ');
     
     if (produto.toUpperCase() != 'SAIR')
-        lista.push()
+        lista.push(produto)
     } 
 while (produto.toUpperCase() == 'SAIR')
