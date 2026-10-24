@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presença</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Presença</h1>
+
+    <ul id="lista"></ul>
+
+    <script>
+        let alunos = [];
+        let nome = "";
+
+        // Inicia o registro automaticamente
+        while (true) {
+            nome = prompt("Digite o nome do aluno ou 'sair' para finalizar:");
+
+            if (nome === null || nome.trim().toLowerCase() === "sair") {
+                break;
+            }
+
+            nome = nome.trim();
+
+            if (nome !== "") {
+                alunos.push(nome);
+            }
+        }
+
+        // Exibe a lista de presença na página
+        let lista = document.getElementById("lista");
+
+        if (alunos.length === 0) {
+            lista.innerHTML = "<li>Nenhum aluno registrado.</li>";
+        } else {
+            alunos.forEach(function(aluno) {
+                let item = document.createElement("li");
+                item.textContent = aluno;
+                lista.appendChild(item);
+            });
+        }
+    </script>
+
+</body>
+</html>
