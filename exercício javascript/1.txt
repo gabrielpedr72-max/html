@@ -1,1 +1,1 @@
-Faça um algoritmo que receba os nomes dos alunos, pare de receber nomes quando recebar a palavra "sair", e armazene em um array em seguida exiba a "Lista de presença" contendo os nomes desses alunos. Esta atividaede deve utilizar os elementos: array, whila e foreach
+Receba uma palabra. Converta para array. Em seguida, informe se esta plaabra é ou não um palíndromo 
