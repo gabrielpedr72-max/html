@@ -2,7 +2,7 @@ var lista = [];
 var produto = "";
 
 while (true) {
-    produto = prompt("Informe um produto ou 'sair' para encerrar):");
+    produto = prompt("Informe um produto ou 'sair' para encerrar: ");
 
     if (produto === null || produto.toUpperCase() === "SAIR") {
         break;
