@@ -1,3 +1,5 @@
-Desenvolva um programa que receba do usuário o valor de um produto e o percentual de desconto. Calcule e exiba o valor final total do produto com desconto e também o valor do desconto aplicado. Subtrair o desconto
+Desenvolva um programa que receba 3 notas, em seguida calcula a média e exiba a média e uma plavra de acordo com as intruções abaixo:
 
-Saídas> valor_com_desconto; valor_desconto
+    >= 7: Aprovado (Elemento na cor de texto verde)
+    >= 5 && < 7: Recuperação (Elemento ou texto na cor amarela)
+    < 5: Reprovado (Elemento ou texti na cor vermelha)
