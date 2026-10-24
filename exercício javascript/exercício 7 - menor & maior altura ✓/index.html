@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alturas das Pessoas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .menor {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .maior {
+            color: green;
+            font-weight: bold;
+        }
+
+        .destaque {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Alturas das 10 Pessoas</h1>
+
+    <div id="principais" class="destaque"></div>
+
+    <h2>Lista de alturas</h2>
+    <ol id="lista"></ol>
+
+    <script>
+        let alturas = [];
+
+        // Recebe as alturas e armazena no array
+        for (let i = 0; i < 10; i++) {
+            let altura;
+
+            do {
+                altura = Number(
+                    prompt("Digite a altura da pessoa " + (i + 1) + " em metros:")
+                );
+            } while (!Number.isFinite(altura) || altura <= 0);
+
+            alturas.push(altura);
+        }
+
+        // Identifica a menor e a maior altura
+        let menorAltura = Math.min(...alturas);
+        let maiorAltura = Math.max(...alturas);
+
+        // Exibe os dois principais resultados
+        document.getElementById("principais").innerHTML =
+            '<p class="menor">Menor altura: ' +
+            menorAltura.toFixed(2) + ' m</p>' +
+            '<p class="maior">Maior altura: ' +
+            maiorAltura.toFixed(2) + ' m</p>';
+
+        // Exibe todas as alturas do array
+        let lista = document.getElementById("lista");
+
+        alturas.forEach(function(altura, indice) {
+            let item = document.createElement("li");
+
+            item.textContent =
+                "Pessoa " + (indice + 1) + ": " +
+                altura.toFixed(2) + " m";
+
+            if (altura === menorAltura) {
+                item.classList.add("menor");
+                item.textContent += " — MENOR ALTURA";
+            }
+
+            if (altura === maiorAltura) {
+                item.classList.add("maior");
+                item.textContent += " — MAIOR ALTURA";
+            }
+
+            lista.appendChild(item);
+        });
+    </script>
+
+</body>
+</html>

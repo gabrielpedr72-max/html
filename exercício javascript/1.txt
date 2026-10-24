@@ -1,1 +1,3 @@
-Receba uma palabra. Converta para array. Em seguida, informe se esta plaabra é ou não um palíndromo 
+Desenvolver um algoritmo quie leia a altura de 10 pessoas. Este programa deverá calcular e mostrar:
+    A menor altura do grupo;
+    A maior altura do grupo.
