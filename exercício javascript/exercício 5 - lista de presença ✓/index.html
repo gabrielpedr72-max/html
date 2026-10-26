@@ -31,7 +31,6 @@
         let alunos = [];
         let nome = "";
 
-        // Inicia o registro automaticamente
         while (true) {
             nome = prompt("Digite o nome do aluno ou 'sair' para finalizar:");
 
@@ -45,8 +44,7 @@
                 alunos.push(nome);
             }
         }
-
-        // Exibe a lista de presença na página
+        
         let lista = document.getElementById("lista");
 
         if (alunos.length === 0) {
